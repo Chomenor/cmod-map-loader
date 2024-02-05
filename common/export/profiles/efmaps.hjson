@@ -2418,6 +2418,7 @@
     "baseEF/ef_raiders": { sha256: "09adc760c041a2dee55e797c9d4393dd2eeea7411d260010bc556dc3aef4339b", profile: "eliteforce" },
     "baseEF/ef_riftsanc": { sha256: "71ed710e58e423a8c321dd6db57d3b3a93ff11f0d5582ea1b1704d73ec69b610", profile: "eliteforce" },
     "baseEF/ef_riyadh": { sha256: "316ce3cb7c0e2121aec9a9767e3f3fd0acdeb81f8719ff02c3823dc842cefee1", profile: "eliteforce" },
+    "baseEF/ef_tatooine": { sha256: "33455e91a89177935688e4d413d2668ae19185ab15b91beba8fd0d06af1f166e", profile: "eliteforce" },
     "baseEF/ef_terrorism": { sha256: "b616afd0142286f96b6849fd16cb54e4d800759d0efe43b734609edda8f03938", profile: "eliteforce" },
     "baseEF/ef_toxic": { sha256: "d8313340b05e7b431b264c3352de71dbf11c20ee57a4f4c3c207f9f0c773fbcc", profile: "eliteforce" },
     "baseEF/ef_turnpike": { sha256: "326bf7e76abd9ecb2a2e28a21a4f851597fcd5863eb7a5f6d640598260ccaee8", profile: "eliteforce" },

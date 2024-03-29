@@ -358,7 +358,8 @@ def run_export(manifest:Manifest, output_path:str, local_dirs:list[str] = []):
                 priority: numeric
                 download: "yes", "no", "auto"
                 pure: "yes", "no", "auto"
-                dep_group: numeric """
+                dep_group: numeric
+                pure_sort: str """
             manifest_paks = [{"pak_name": pak_name, **info} for pak_name, info in mapcfg["client_paks"].items()]
             manifest_paks.sort(key = lambda x: x["priority"], reverse=True)
 
@@ -414,6 +415,9 @@ def run_export(manifest:Manifest, output_path:str, local_dirs:list[str] = []):
                     "pk3_source_path": f"{client_pk3_source.mod_dir}/refonly/{client_pk3_source.filename}.pk3",
                     "download": download,
                 }
+
+                if "pure_sort" in client_pak:
+                    result["pure_sort"] = client_pak["pure_sort"]
 
                 client_paks_out.append(result)
 

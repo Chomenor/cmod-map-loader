@@ -8,7 +8,6 @@ import hashlib
 import struct
 import traceback
 import urllib.request
-from ..libs import hjson
 
 def convert_fs_path(path:str):
     # Replace slash types and skip leading slash for consistency with game filesystem.
@@ -35,10 +34,14 @@ def file_sha256(path):
         for byte_block in iter(lambda: f.read(65536), b""):
             sha256_hash.update(byte_block)
         return sha256_hash.hexdigest()
+    
+def read_json_file(path):
+  with open(path, "r", encoding="utf-8") as src:
+    return json.load(src)
 
-def load_hjson_file(path):
-    with open(path, 'r') as src:
-        return hjson.load(src)
+def write_json_file(obj, path):
+  with open(path, "w", encoding="utf-8", newline="\n") as tgt:
+    json.dump(obj, tgt, sort_keys=True, indent=2)
 
 def pk3_files_in_directory(path):
     """ Iterate pk3 files in specified location.
